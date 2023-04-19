@@ -44,6 +44,7 @@ export default function MessagesScreen() {
 						title={item.title}
 						subtitle={item.description}
 						image={item.image}
+						onPress={() => {}}
 					/>
 				)}
 				ItemSeparatorComponent={ListItemSeperator}
