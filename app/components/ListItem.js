@@ -19,7 +19,12 @@ export default function ListItem({ image, title, subtitle }) {
 }
 
 const styles = StyleSheet.create({
-	continer: { flexDirection: "row", alignItems: "center", marginLeft: 20 },
+	continer: {
+		flexDirection: "row",
+		alignItems: "center",
+		marginLeft: 20,
+		padding: 12,
+	},
 	image: { width: 70, height: 70, borderRadius: 35, marginRight: 10 },
 	subtitle: { color: colors.medium },
 	title: { fontWeight: 500 },
