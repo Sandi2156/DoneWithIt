@@ -2,3 +2,5 @@
 2. style={[]}
 3. FlatList api
 4. expo-constants
+5. gesture handler : https://docs.expo.dev/versions/latest/sdk/gesture-handler/
+6. import {} from "@expo/vector-icons"
