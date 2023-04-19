@@ -36,11 +36,24 @@ const initialMessages = [
 
 export default function MessagesScreen() {
 	const [messages, setMessages] = useState(initialMessages);
+	const [refreshing, setRefreshing] = useState(false);
 
 	const handleDelete = (message) => {
 		setMessages((prevMessages) =>
 			prevMessages.filter((elm) => elm.id !== message.id)
 		);
+	};
+
+	const refreshHandler = () => {
+		setMessages([
+			...messages,
+			{
+				id: messages.length + 1,
+				title: `T${messages.length + 1}`,
+				description: "D5",
+				image: require("../assets/mosh.jpg"),
+			},
+		]);
 	};
 
 	return (
@@ -60,6 +73,8 @@ export default function MessagesScreen() {
 					/>
 				)}
 				ItemSeparatorComponent={ListItemSeperator}
+				refreshing={refreshing}
+				onRefresh={refreshHandler}
 			/>
 		</Screen>
 	);
