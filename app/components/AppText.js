@@ -8,6 +8,6 @@ export default function AppText(props) {
 const styles = StyleSheet.create({
 	text: {
 		fontFamily: "Roboto",
-		fontSize: 20,
+		fontSize: 15,
 	},
 });
