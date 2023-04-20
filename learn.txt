@@ -1,6 +1,6 @@
 1. platform specific code: Platform.select, file.platform.js
 2. style={[]}
-3. FlatList api
+3. FlatList, SectionList api
 4. expo-constants
 5. gesture handler : https://docs.expo.dev/versions/latest/sdk/gesture-handler/
 6. import {} from "@expo/vector-icons"
