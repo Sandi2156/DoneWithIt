@@ -4,8 +4,9 @@ import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import defaultStyles from "../config/styles";
+import AppText from "./AppText";
 
-export default function AppTextInput({ iconName, ...otherProps }) {
+export default function AppPicker({ iconName, placeholder }) {
 	return (
 		<View style={styles.container}>
 			{iconName && (
@@ -17,7 +18,13 @@ export default function AppTextInput({ iconName, ...otherProps }) {
 				/>
 			)}
 
-			<TextInput style={styles.textInput} {...otherProps} />
+			<AppText style={styles.text}>{placeholder}</AppText>
+
+			<MaterialCommunityIcons
+				name="chevron-down"
+				size={20}
+				color={defaultStyles.colors.medium}
+			/>
 		</View>
 	);
 }
@@ -35,5 +42,5 @@ const styles = StyleSheet.create({
 
 	icon: { marginRight: 10 },
 
-	textInput: defaultStyles.text,
+	text: { flex: 1 },
 });
