@@ -1,12 +1,12 @@
 import { StyleSheet, Text, TouchableHighlight } from "react-native";
 import React from "react";
 
-import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 export default function AppButton({ title, onPress, color = "primary" }) {
 	return (
 		<TouchableHighlight
-			style={[styles.button, { backgroundColor: colors[color] }]}
+			style={[styles.button, { backgroundColor: defaultStyles.colors[color] }]}
 			onPress={onPress}
 		>
 			<Text style={styles.text}>{title}</Text>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 	},
 
 	text: {
-		color: colors.white,
+		color: defaultStyles.colors.white,
 		fontSize: 18,
 		textTransform: "uppercase",
 		fontWeight: "bold",

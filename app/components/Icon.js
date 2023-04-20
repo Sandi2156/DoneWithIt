@@ -3,7 +3,7 @@ import React from "react";
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 export default function Icon({
 	name,
@@ -17,14 +17,14 @@ export default function Icon({
 				width: size,
 				height: size,
 				borderRadius: size / 2,
-				backgroundColor: colors[backgroundColor],
+				backgroundColor: defaultStyles.colors[backgroundColor],
 				justifyContent: "center",
 				alignItems: "center",
 			}}
 		>
 			<MaterialCommunityIcons
 				name={name}
-				color={colors[iconColor]}
+				color={defaultStyles.colors[iconColor]}
 				size={size * 0.5}
 			/>
 		</View>
