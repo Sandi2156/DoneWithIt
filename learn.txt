@@ -3,4 +3,5 @@
 3. FlatList, SectionList api
 4. expo-constants
 5. gesture handler : https://docs.expo.dev/versions/latest/sdk/gesture-handler/
-6. import {} from "@expo/vector-icons"
+6. import {MaterialCommunityIcons} from "@expo/vector-icons"
+7. import {Modal, TouchableOpacity...} from 'react-native'
