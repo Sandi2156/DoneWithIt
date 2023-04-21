@@ -35,5 +35,5 @@ const styles = StyleSheet.create({
 
 	icon: { marginRight: 10 },
 
-	textInput: defaultStyles.text,
+	textInput: { ...defaultStyles.text, fontSize: 15 },
 });

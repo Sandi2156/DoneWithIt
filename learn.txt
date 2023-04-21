@@ -5,3 +5,4 @@
 5. gesture handler : https://docs.expo.dev/versions/latest/sdk/gesture-handler/
 6. import {MaterialCommunityIcons} from "@expo/vector-icons"
 7. import {Modal, TouchableOpacity...} from 'react-native'
+8. Formik and Yup library
