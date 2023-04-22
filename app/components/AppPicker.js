@@ -2,7 +2,6 @@ import {
 	FlatList,
 	Modal,
 	StyleSheet,
-	TextInput,
 	TouchableWithoutFeedback,
 	View,
 } from "react-native";
