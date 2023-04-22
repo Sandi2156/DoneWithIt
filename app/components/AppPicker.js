@@ -41,7 +41,9 @@ export default function AppPicker({
 						/>
 					)}
 
-					<AppText style={styles.text}>
+					<AppText
+						style={[styles.text, !selectedItem ? styles.placeholder : {}]}
+					>
 						{selectedItem ? selectedItem.label : placeholder}
 					</AppText>
 
@@ -81,5 +83,7 @@ const styles = StyleSheet.create({
 
 	icon: { marginRight: 10 },
 
-	text: { flex: 1 },
+	text: { flex: 1, fontSize: 16 },
+
+	placeholder: { color: defaultStyles.colors.medium },
 });
