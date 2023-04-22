@@ -13,7 +13,7 @@ export default function WelcomScreen() {
 			<View style={styles.logoContainer}>
 				<Image source={require("../assets/logo-red.png")} style={styles.logo} />
 
-				<Text style={styles.tagline}>Sell What you don't need</Text>
+				<Text style={styles.tagline}>Sell What you dorn't need</Text>
 			</View>
 
 			<View style={styles.buttonsContainer}>
