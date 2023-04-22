@@ -6,6 +6,7 @@ import colors from "../config/colors";
 
 import Swipeable from "react-native-gesture-handler/Swipeable";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function ListItem({
 	image,
@@ -31,6 +32,12 @@ export default function ListItem({
 								<AppText style={styles.subtitle}>{subtitle}</AppText>
 							)}
 						</View>
+
+						<MaterialCommunityIcons
+							name="chevron-right"
+							size={25}
+							color={colors.medium}
+						/>
 					</View>
 				</TouchableHighlight>
 			</Swipeable>
