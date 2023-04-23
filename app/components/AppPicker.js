@@ -1,4 +1,5 @@
 import {
+	Button,
 	FlatList,
 	Modal,
 	StyleSheet,
@@ -16,10 +17,12 @@ import PickerItem from "./PickerItem";
 
 export default function AppPicker({
 	iconName,
+	PickerItemComponent = PickerItem,
 	placeholder,
 	items,
 	selectedItem,
 	onSelectItem,
+	numberOfColumns = 1,
 }) {
 	const [modalVisible, setModalVisible] = useState(false);
 
@@ -57,11 +60,23 @@ export default function AppPicker({
 
 			<Modal visible={modalVisible} animationType="slide">
 				<Screen>
+					<TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
+						<MaterialCommunityIcons
+							name="close-circle"
+							size={25}
+							style={{ alignSelf: "center" }}
+						/>
+					</TouchableWithoutFeedback>
+
 					<FlatList
 						data={items}
 						keyExtractor={(item) => item.label}
+						numColumns={numberOfColumns}
 						renderItem={({ item }) => (
-							<PickerItem {...item} onPress={() => onPressHandler(item)} />
+							<PickerItemComponent
+								item={item}
+								onPress={() => onPressHandler(item)}
+							/>
 						)}
 					/>
 				</Screen>

@@ -3,13 +3,18 @@ import React from "react";
 
 import defaultStyles from "../config/styles";
 
-export default function AppButton({ title, onPress, color = "primary" }) {
+export default function AppButton({
+	title,
+	onPress,
+	color = "primary",
+	textColor = "white",
+}) {
 	return (
 		<TouchableHighlight
 			style={[styles.button, { backgroundColor: defaultStyles.colors[color] }]}
 			onPress={onPress}
 		>
-			<Text style={styles.text}>{title}</Text>
+			<Text style={[styles.text, { color: textColor }]}>{title}</Text>
 		</TouchableHighlight>
 	);
 }
@@ -25,7 +30,6 @@ const styles = StyleSheet.create({
 	},
 
 	text: {
-		color: defaultStyles.colors.white,
 		fontSize: 18,
 		textTransform: "uppercase",
 		fontWeight: "bold",

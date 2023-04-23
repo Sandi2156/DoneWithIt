@@ -26,10 +26,14 @@ export default function ListItem({
 						{image && <Image style={styles.image} source={image} />}
 
 						<View style={styles.details}>
-							<AppText style={styles.title}>{title}</AppText>
+							<AppText style={styles.title} noOfLines={1}>
+								{title}
+							</AppText>
 
 							{subtitle && (
-								<AppText style={styles.subtitle}>{subtitle}</AppText>
+								<AppText style={styles.subtitle} noOfLines={2}>
+									{subtitle}
+								</AppText>
 							)}
 						</View>
 
@@ -52,7 +56,7 @@ const styles = StyleSheet.create({
 		marginLeft: 20,
 		padding: 12,
 	},
-	details: { marginLeft: 10, justifyContent: "center" },
+	details: { marginLeft: 10, justifyContent: "center", flex: 1 },
 	image: { width: 50, height: 50, borderRadius: 25 },
 	subtitle: { color: colors.medium },
 	title: { fontWeight: 600 },
