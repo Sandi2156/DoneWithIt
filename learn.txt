@@ -6,3 +6,6 @@
 6. import {MaterialCommunityIcons} from "@expo/vector-icons"
 7. import {Modal, TouchableOpacity...} from 'react-native'
 8. Formik and Yup library
+
+PART - 2
+1. library: expo-image-picker, expo-permissions(deprecated)
