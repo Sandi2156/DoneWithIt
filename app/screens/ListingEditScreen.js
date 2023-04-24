@@ -16,6 +16,7 @@ const validationSchema = Yup.object().shape({
 	price: Yup.number().required().min(1).max(10000).label("Price"),
 	description: Yup.string().label("Description"),
 	category: Yup.object().nullable().required().label("Category"),
+	images: Yup.array().required().label("Image"),
 });
 
 const categories = [
@@ -29,7 +30,13 @@ const categories = [
 	},
 ];
 
-const initialValues = { title: "", price: "", description: "", category: null };
+const initialValues = {
+	title: "",
+	price: "",
+	description: "",
+	category: null,
+	images: [],
+};
 
 export default function ListingEditScreen() {
 	return (

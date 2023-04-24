@@ -15,6 +15,7 @@ const categories = [
 
 import * as ImagePicker from "expo-image-picker";
 import { Button, Image } from "react-native";
+import ImageInput from "./app/components/ImageInput";
 
 export default function App() {
 	const [imageUri, setImageUri] = useState();
@@ -33,11 +34,5 @@ export default function App() {
 		askPermission();
 	}, []);
 
-	return (
-		<Screen>
-			<Button title="select image" onPress={selectImage} />
-
-			<Image source={{ uri: imageUri }} style={{ height: 200, width: 200 }} />
-		</Screen>
-	);
+	return <ImageInput />;
 }
