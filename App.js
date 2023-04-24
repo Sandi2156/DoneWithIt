@@ -16,23 +16,33 @@ const categories = [
 import * as ImagePicker from "expo-image-picker";
 import { Button, Image } from "react-native";
 import ImageInput from "./app/components/ImageInput";
+import ImageInputList from "./app/components/ImageInputList";
 
 export default function App() {
-	const [imageUri, setImageUri] = useState();
+	const [imageUris, setImageUris] = useState([]);
 	const askPermission = async () => {
 		// const result = await ImagePicker.requestMediaLibraryPermissionsAsync();
 		// if (!result.granted) alert("You need to give permission");
 	};
 
-	const selectImage = async () => {
-		const result = await ImagePicker.launchImageLibraryAsync();
+	const addImage = (uri) => {
+		setImageUris([...imageUris, uri]);
+		console.log(uri);
+	};
 
-		if (!result.canceled) setImageUri(result.assets[0].uri);
+	const removeImage = (uri) => {
+		setImageUris((uris) => uris.filter((preUri) => preUri != uri));
 	};
 
 	useEffect(() => {
 		askPermission();
 	}, []);
 
-	return <ImageInput />;
+	return (
+		<ImageInputList
+			imageUris={imageUris}
+			addImage={addImage}
+			removeImage={removeImage}
+		/>
+	);
 }
