@@ -39,10 +39,12 @@ export default function App() {
 	}, []);
 
 	return (
-		<ImageInputList
-			imageUris={imageUris}
-			addImage={addImage}
-			removeImage={removeImage}
-		/>
+		<Screen>
+			<ImageInputList
+				imageUris={imageUris}
+				addImage={addImage}
+				removeImage={removeImage}
+			/>
+		</Screen>
 	);
 }

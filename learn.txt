@@ -9,3 +9,14 @@
 
 PART - 2
 1. library: expo-image-picker, expo-permissions(deprecated)
+2. components: 
+  i> ScrollView
+  <ScrollView
+    horizontal
+    ref={scrollRef}
+    onContentSizeChange={() =>
+      scrollRef.current.scrollToEnd({ animated: true })
+    }
+  ></ScrollView>
+
+  ii>
