@@ -10,15 +10,16 @@ import ListItemSeperator from "../components/ListItemSeperator";
 const menuItems = [
 	{
 		title: "My Listings",
-		icon: { name: "format-list-bulleted", backgroundColor: "primary" },
+		icon: { name: "format-list-bulleted", backgroundColor: "#fc5c65" },
 	},
 	{
 		title: "My Messages",
-		icon: { name: "email", backgroundColor: "secondary" },
+		icon: { name: "email", backgroundColor: "#4ecdc4" },
+		targetScreen: "Messages",
 	},
 ];
 
-export default function AccountScreen() {
+export default function AccountScreen({ navigation }) {
 	return (
 		<Screen style={styles.screen}>
 			<View style={styles.container}>
@@ -37,6 +38,7 @@ export default function AccountScreen() {
 						<ListItem
 							title={item.title}
 							IconComponent={<Icon {...item.icon} />}
+							onPress={() => navigation.navigate(item.targetScreen)}
 						/>
 					)}
 					ItemSeparatorComponent={ListItemSeperator}
@@ -46,7 +48,7 @@ export default function AccountScreen() {
 			<View style={styles.container}>
 				<ListItem
 					title="Log Out"
-					IconComponent={<Icon name="logout" backgroundColor="yellow" />}
+					IconComponent={<Icon name="logout" backgroundColor="red" />}
 				/>
 			</View>
 		</Screen>

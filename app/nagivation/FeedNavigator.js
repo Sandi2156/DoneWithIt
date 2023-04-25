@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 export default FeedNavigator = () => {
 	return (
 		<Stack.Navigator
-			mode="card"
+			mode="modal"
 			screenOptions={{
 				headerShown: false,
 				gestureEnabled: true,
