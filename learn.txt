@@ -8,7 +8,7 @@
 8. Formik and Yup library
 
 PART - 2
-1. library: expo-image-picker, expo-permissions(deprecated)
+1. library: expo-image-picker, expo-permissions(deprecated), expo-location
 2. components: 
   i> ScrollView
   <ScrollView
@@ -19,4 +19,5 @@ PART - 2
     }
   ></ScrollView>
 
-  ii>
+  ii> TouchableOpacity, TouchableWithoutFeedback, TouchableHighlight
+  iii> FlatList
