@@ -23,3 +23,7 @@ PART - 2
   iii> FlatList
 
 3. custom hooks: useLocation
+4. Navigators
+  i> Stack Navigator
+  ii> Tab Navigator
+  iii> Drawer Navigator

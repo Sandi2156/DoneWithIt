@@ -3,7 +3,7 @@ import React from "react";
 
 import AppButton from "../components/AppButton";
 
-export default function WelcomScreen() {
+export default function WelcomScreen({ navigation }) {
 	return (
 		<ImageBackground
 			blurRadius={10}
@@ -17,9 +17,13 @@ export default function WelcomScreen() {
 			</View>
 
 			<View style={styles.buttonsContainer}>
-				<AppButton title="login" onPress={() => {}} />
+				<AppButton title="login" onPress={() => navigation.navigate("Login")} />
 
-				<AppButton title="register" color="secondary" onPress={() => {}} />
+				<AppButton
+					title="register"
+					color="secondary"
+					onPress={() => navigation.navigate("Register")}
+				/>
 			</View>
 		</ImageBackground>
 	);
