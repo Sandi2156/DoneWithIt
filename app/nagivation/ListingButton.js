@@ -19,9 +19,9 @@ export default function ListingButton({ onPress }) {
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: colors.primary,
-		height: 80,
-		width: 80,
-		borderRadius: 40,
+		height: 70,
+		width: 70,
+		borderRadius: 35,
 		justifyContent: "center",
 		alignItems: "center",
 		bottom: 30,

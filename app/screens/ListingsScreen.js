@@ -5,6 +5,8 @@ import Screen from "../components/Screen";
 import Card from "../components/Card";
 import colors from "../config/colors";
 
+import routes from "../nagivation/routes";
+
 const listings = [
 	{
 		id: 1,
@@ -31,7 +33,7 @@ export default function ListingsScreen({ navigation }) {
 						title={item.title}
 						subtitle={`$${item.price}`}
 						image={item.image}
-						onPress={() => navigation.navigate("ListingDetails", item)}
+						onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
 					/>
 				)}
 			/>
