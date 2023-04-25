@@ -38,13 +38,5 @@ export default function App() {
 		askPermission();
 	}, []);
 
-	return (
-		<Screen>
-			<ImageInputList
-				imageUris={imageUris}
-				addImage={addImage}
-				removeImage={removeImage}
-			/>
-		</Screen>
-	);
+	return <ListingEditScreen />;
 }
