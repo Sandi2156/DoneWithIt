@@ -21,3 +21,5 @@ PART - 2
 
   ii> TouchableOpacity, TouchableWithoutFeedback, TouchableHighlight
   iii> FlatList
+
+3. custom hooks: useLocation
