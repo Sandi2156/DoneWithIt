@@ -27,3 +27,4 @@ PART - 2
   i> Stack Navigator
   ii> Tab Navigator
   iii> Drawer Navigator
+5. you can override navigation theme
