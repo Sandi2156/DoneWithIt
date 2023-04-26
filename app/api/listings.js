@@ -4,7 +4,7 @@ const endpoint = "/listings";
 
 const getListings = () => client.get(endpoint);
 
-const postListing = (listingm, onUploadProgress) => {
+const postListing = (listing, onUploadProgress) => {
 	const data = new FormData();
 
 	data.append("title", listing.title);

@@ -9,7 +9,7 @@
 
 PART - 2
 1. library: expo-image-picker, expo-permissions(deprecated), expo-location, ApiSause (for api calls), react-native-debugger (for network and redux debugging)
-    lottie-react-native (for animation)
+    lottie-react-native (for animation), react-native-progress (progress-bar)
 2. components: 
   i> ScrollView
   <ScrollView
