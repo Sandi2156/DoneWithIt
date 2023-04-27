@@ -29,3 +29,4 @@ PART - 2
   ii> Tab Navigator
   iii> Drawer Navigator
 5. you can override navigation theme
+6. Offline Support
