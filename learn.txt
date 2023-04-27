@@ -29,4 +29,20 @@ PART - 2
   ii> Tab Navigator
   iii> Drawer Navigator
 5. you can override navigation theme
+
 6. Offline Support
+  a. Stratagies for creating offline capable apps   
+    i. Notify the user
+    ii. Disable certail features
+    iii. Cache data
+    iv. Store user actions
+  b. @react-native-community/netinfo -> this package is used to check the network connection
+  c. Caching options in a native-app
+    i. AsyncStorage : @react-native-async-storage/async-storage
+    ii. SecureStore
+    iii. SQLlite
+  d. Caching Layer
+    i. Serialize/ DeSerialize (Stringify / Parse)
+    ii. Apply timestamp
+    iii. Remove expired items
+  

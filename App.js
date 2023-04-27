@@ -1,15 +1,20 @@
-import Screen from "./app/components/Screen";
 import AppText from "./app/components/AppText";
+import Screen from "./app/components/Screen";
 
-import { NavigationContainer } from "@react-navigation/native";
-import AuthNavigator from "./app/nagivation/AuthNavigator";
-import navigationTheme from "./app/nagivation/navigationTheme";
-import AppNavigator from "./app/nagivation/AppNavigator";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function App() {
+	const storeData = async (value) => {
+		try {
+			await AsyncStorage.setItem("@storage_Key", value);
+		} catch (e) {
+			// saving error
+		}
+	};
+	storeData();
 	return (
-		<NavigationContainer theme={navigationTheme}>
-			<AppNavigator />
-		</NavigationContainer>
+		<Screen>
+			<AppText>jlsjfljl</AppText>
+		</Screen>
 	);
 }
