@@ -1,10 +1,6 @@
-import {
-	Image,
-	StyleSheet,
-	View,
-	TouchableWithoutFeedback,
-} from "react-native";
+import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
 import React from "react";
+import { Image } from "react-native-expo-image-cache";
 
 import defaultStyles from "../config/styles";
 
@@ -14,7 +10,8 @@ export default function Card({ title, subtitle, image, onPress }) {
 	return (
 		<TouchableWithoutFeedback onPress={onPress}>
 			<View style={styles.card}>
-				<Image style={styles.image} source={image} />
+				{/* you can add preview for progressive image: preview={{uri: thumbnailUrl}} tint="light"*/}
+				<Image style={styles.image} uri={image} />
 
 				<View style={styles.detailsContainer}>
 					<AppText style={styles.title}>{title}</AppText>

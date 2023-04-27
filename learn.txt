@@ -33,7 +33,7 @@ PART - 2
 6. Offline Support
   a. Stratagies for creating offline capable apps   
     i. Notify the user
-    ii. Disable certail features
+    ii. Disable certain features
     iii. Cache data
     iv. Store user actions
   b. @react-native-community/netinfo -> this package is used to check the network connection
@@ -45,4 +45,5 @@ PART - 2
     i. Serialize/ DeSerialize (Stringify / Parse)
     ii. Apply timestamp
     iii. Remove expired items
+  e. react-native-expo-image-cache : for caching images, this package relies on expo-blur
   

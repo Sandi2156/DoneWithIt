@@ -1,20 +1,17 @@
-import AppText from "./app/components/AppText";
-import Screen from "./app/components/Screen";
+import { NavigationContainer } from "@react-navigation/native";
 
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import navigationTheme from "./app/nagivation/navigationTheme";
+import AppNavigator from "./app/nagivation/AppNavigator";
+import OfflineNotice from "./app/components/OfflineNotice";
 
 export default function App() {
-	const storeData = async (value) => {
-		try {
-			await AsyncStorage.setItem("@storage_Key", value);
-		} catch (e) {
-			// saving error
-		}
-	};
-	storeData();
 	return (
-		<Screen>
-			<AppText>jlsjfljl</AppText>
-		</Screen>
+		<>
+			<OfflineNotice />
+
+			<NavigationContainer theme={navigationTheme}>
+				<AppNavigator />
+			</NavigationContainer>
+		</>
 	);
 }
