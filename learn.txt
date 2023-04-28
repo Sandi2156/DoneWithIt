@@ -55,7 +55,7 @@ PART - 2
   b. jwt-decode : [library to decode json web token]
   c. expo-secure-store : [library to store something securely in file system. we'll use it to store auth token. so that
     if user restart the app he doesn't have to login again]
-    
+  d. expo-app-loading : to hadle splash
 
   
   
