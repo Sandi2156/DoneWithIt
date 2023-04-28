@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import AppLoading from "expo-app-loading";
 
 import navigationTheme from "./app/nagivation/navigationTheme";
 import OfflineNotice from "./app/components/OfflineNotice";
@@ -12,6 +13,7 @@ import jwtDecode from "jwt-decode";
 
 export default function App() {
 	const [user, setUser] = useState();
+	const [isReady, setIsReady] = useState(false);
 
 	const getUser = async () => {
 		const token = await authStorage.getToken();
@@ -20,9 +22,11 @@ export default function App() {
 		setUser(jwtDecode(token));
 	};
 
-	useEffect(() => {
-		getUser();
-	}, []);
+	if (!isReady) {
+		return (
+			<AppLoading startAsync={getUser} onFinish={() => setIsReady(true)} />
+		);
+	}
 
 	return (
 		<AuthContext.Provider value={{ user, setUser }}>
