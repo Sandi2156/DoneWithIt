@@ -46,4 +46,12 @@ PART - 2
     ii. Apply timestamp
     iii. Remove expired items
   e. react-native-expo-image-cache : for caching images, this package relies on expo-blur
+
+7. Authentication
+  a. Providers
+    i. Amplify by Amazon
+    ii. Firebase by Google
+    iii. Auth0
+  b. jwt-decode : [library to decode json web token]
+  
   
