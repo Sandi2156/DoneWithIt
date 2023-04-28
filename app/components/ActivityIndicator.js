@@ -19,6 +19,15 @@ export default function ActivityIndicator({ visible }) {
 }
 
 const styles = StyleSheet.create({
-	container: { flex: 1, justifyContent: "center", alignItems: "center" },
+	container: {
+		flex: 1,
+		justifyContent: "center",
+		alignItems: "center",
+		position: "absolute",
+		height: "100%",
+		width: "100%",
+		backgroundColor: "white",
+		opacity: 0.8,
+	},
 	lottie: { width: 150, height: 150 },
 });

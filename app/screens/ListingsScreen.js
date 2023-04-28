@@ -37,23 +37,25 @@ const listings = [
 
 export default function ListingsScreen({ navigation }) {
 	return (
-		<Screen style={styles.screen}>
+		<>
 			<ActivityIndicator visible={false} />
-			<FlatList
-				data={listings}
-				keyExtractor={(item) => item.id.toString()}
-				renderItem={({ item }) => (
-					<Card
-						title={item.title}
-						subtitle={`$${item.price}`}
-						image={item.image}
-						onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
-					/>
-				)}
-				showsHorizontalScrollIndicator={false}
-				showsVerticalScrollIndicator={false}
-			/>
-		</Screen>
+			<Screen style={styles.screen}>
+				<FlatList
+					data={listings}
+					keyExtractor={(item) => item.id.toString()}
+					renderItem={({ item }) => (
+						<Card
+							title={item.title}
+							subtitle={`$${item.price}`}
+							image={item.image}
+							onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
+						/>
+					)}
+					showsHorizontalScrollIndicator={false}
+					showsVerticalScrollIndicator={false}
+				/>
+			</Screen>
+		</>
 	);
 }
 
