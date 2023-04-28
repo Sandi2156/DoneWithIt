@@ -15,6 +15,7 @@ import colors from "../config/colors";
 import auth from "../api/auth";
 
 import AuthContext from "../auth/context";
+import authStorage from "../auth/storage";
 
 const validationSchema = Yup.object().shape({
 	email: Yup.string().required().email().label("Email"),
@@ -35,6 +36,7 @@ export default function LoginScreen() {
 		setLoginFailed(false);
 		const user = jwtDecode(result.data);
 		authContext.setUser(user);
+		authStorage.storeToken(result.data);
 	};
 
 	return (
